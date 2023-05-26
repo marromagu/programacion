@@ -1,0 +1,1 @@
+gestionarliga.IComparable

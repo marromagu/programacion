@@ -1,0 +1,329 @@
+1.- Escribe un Algoritmo que pida al usuario un número real y muestre por pantalla Siel número es positivo, negativo o CERO.
+
+/* Versión a */
+Algoritmo Ejercicio1a
+ 
+    Definir n Como Entero
+
+    Escribir "Introduzca un número:"
+    Leer n
+    Si(n > 0) Entonces
+        Escribir "Es un número positivo"
+    Sino
+        Si(n < 0) Entonces
+            Escribir "Es un número negativo"
+        Sino
+            Escribir "Vale 0"
+        FinSi
+    FinSi
+FinAlgoritmo    
+
+/* Versión b */
+Algoritmo Ejercicio1b
+ 
+    Definir n Como Entero
+
+    Escribir "Introduzca un número:"
+    Leer n
+    Si(n < 0) Entonces
+        Escribir "Es un número negativo"
+    Sino
+        Si(n > 0) Entonces
+            Escribir "Es un número positivo"
+        Sino
+            Escribir "Vale 0"
+        FinSi
+    FinSi
+FinAlgoritmo    
+
+/* Versión c */
+Algoritmo Ejercicio1c
+ 
+    Definir n Como Entero
+
+    Escribir "Introduzca un número:"
+    Leer n
+    Si(n == 0) Entonces
+        Escribir "Vale 0"
+    Sino
+        Si(n > 0) Entonces
+            Escribir "Es un número positivo"
+        Sino
+            Escribir "Es un número negativo"
+        FinSi
+    FinSi
+FinAlgoritmo    
+
+/* Versión d */
+Algoritmo Ejercicio1d
+ 
+    Definir n Como Entero
+
+    Escribir "Introduzca un número:"
+    Leer n
+    Si(n == 0) Entonces
+        Escribir "Vale 0"
+    FinSi
+    Si(n > 0) Entonces
+        Escribir "Es un número positivo"
+    FinSi
+    Si(n < 0) Entonces
+        Escribir "Es un número negativo"
+    FinSi
+FinAlgoritmo    
+
+/******************************************/
+2.- Escribe un Algoritmo que pida al usuario dos números enteros y muestre por pantalla qué número es mayor que el otro. En caso que sean iguales, mostrará por pantalla un mensaje diciendo que ambos números son iguales.
+
+Algoritmo Ejercicio2
+ 
+    Definir n1, n2 Como Entero
+
+    Escribir "Introduzca un número:"
+    Leer n1
+    Escribir "Introduzca otro número:"
+    Leer n2
+    Si(n1 > n2) Entonces
+        Escribir n1, " es mayor que ", n2
+    Sino
+        Si(n2 > n1) Entonces
+            Escribir n2, " es mayor que ", n1
+        Sino
+            Escribir "Son iguales"
+        FinSi
+    FinSi
+FinAlgoritmo    
+
+/******************************************/
+3.- Escribe un Algoritmo que pida al usuario dos números enteros y muestre por pantalla Siel primer número es múltiplo del segundo número.
+
+Algoritmo Ejercicio3
+ 
+    Definir n1, n2 Como Entero
+
+    Escribir "Introduzca un número:"
+    Leer n1
+    Escribir "Introduzca otro número:"
+    Leer n2
+    Si(n1 % n2 == 0) Entonces
+        Escribir n1, " es multiplo de ", n2
+    Sino
+        Escribir n1, " NO es multiplo de ", n2
+    FinSi
+FinAlgoritmo    
+
+/******************************************/
+4.- Escribe un Algoritmo que pida al usuario dos números enteros y muestre por pantalla si alguno de ellos es múltiplo del otro.
+
+Algoritmo Ejercicio4
+ 
+    Definir n1, n2 Como Entero
+
+    Escribir "Introduzca un número:"
+    Leer n1
+    Escribir "Introduzca otro número:"
+    Leer n2
+    Si(n1 % n2 == 0) Entonces
+        Escribir n1, " es multiplo de ", n2
+    FinSi
+    Si(n2 % n1 == 0) Entonces
+        Escribir n2, " es multiplo de ", n1
+    FinSi
+FinAlgoritmo    
+
+/******************************************/
+5.- Escribe un Algoritmo que pida al usuario tres caracteres y muestre por pantalla los tres caracteres ordenados de mayor a menor.
+
+Algoritmo Ejercicio5
+ 
+    Definir c1, c2, c3 Como Caracter
+
+    Escribir "Introduzca tres caracteres:"
+    Leer c1, c2, c3
+    Si(c1 > c2) Entonces
+        Si(c1 > c3) Entonces // c1 es el mayor
+            Si(c2 > c3) Entonces // Ver 2º y 3º
+                Escribir c1, c2, c3
+            Sino
+                Escribir c1, c3, c2
+            FinSi
+        Sino
+            Escribir c3, c1, c2
+        FinSi
+    Sino
+        Si(c2 > c3) Entonces // c2 es el mayor
+            Si(c1 > c3) Entonces // Ver 2º y 3º
+                Escribir c2, c1, c3
+            Sino
+                Escribir c2, c3, c1
+            FinSi
+        Sino
+            Escribir c3, c2, c1
+        FinSi
+    FinSi
+FinAlgoritmo
+
+/******************************************/
+6.- Escribe un Algoritmo que pida al usuario un número entero entre 0 y 9999 y muestre por pantalla cuantas cifras tiene dicho número.
+
+Algoritmo Ejercicio6
+ 
+    Definir num Como Entero
+
+    Escribir "Introduzca un número entre 0 y 9999:"
+    Leer num
+    Si(num < 0 OR num > 9999) Entonces
+        Escribir " El número no es válido"
+    Sino
+        Si(num < 10) Entonces
+           Escribir "Una cifra"
+        Sino
+            Si(num < 100) Entonces
+                Escribir "Dos cifras"
+            Sino
+                Si(num < 1000) Entonces
+                    Escribir "Tres cifras"
+                Sino
+                    Escribir "Cuatro cifras"
+                FinSi
+            FinSi
+        FinSi
+    FinSi
+FinAlgoritmo
+
+/******************************************/
+7.- Escribe un Algoritmo que pida al usuario un número real y muestre por pantalla la nota del alumno, teniendo en cuenta:
+
+    a)0-5 es INSUFICIENTE (0 inclusive)
+
+    b)5-6 es SUFICIENTE (5 inclusive)
+
+    c)6-7 es BIEN (6 inclusive)
+
+    d)7-9 es NOTABLE (7 inclusive)
+
+    e)9-10 es SOBRESALIENTE (9 y 10 inclusive)
+
+Algoritmo Ejercicio7
+ 
+    Definir nota Como Real
+
+    Escribir "Introduzca una nota:"
+    Leer nota
+    Si(nota < 0 OR nota > 10) Entonces
+        Escribir nota, " no es una nota válida"
+    Sino
+        Si(nota < 5) Entonces
+           Escribir "insuficiente"
+        Sino
+            Si(nota < 6) Entonces
+                Escribir "Suficiente"
+            Sino
+                Si(nota < 7) Entonces
+                    Escribir "Bien"
+                Sino
+                    Si(nota < 9) Entonces
+                        Escribir "Notable"
+                    Sino
+                        Escribir "Sobresaliente"
+                    FinSi
+                FinSi
+            FinSi
+        FinSi
+    FinSi
+FinAlgoritmo
+
+/******************************************/
+8.- Escribe un Algoritmo que calcule el área de un triángulo y el área de un círculo, para ello pedirá al usuario la base y la altura del triangulo y el radio del círculo, y que muestre por pantalla ambos cálculos y cual de las dos figuras es mayor.
+
+Algoritmo Ejercicio8
+
+	Definir b, h, areaT, r, areaC como Real
+
+	Escribir "Introduzca la base del triángulo: "
+	Leer b
+	Escribir "Introduzca la altura de un triángulo: "
+	Leer h
+	Escribir "Introduzca el radio del círculo: "
+	Leer r
+	areaT = b * h / 2
+	areaC = PI * r^2
+	Escribir "El área del triángulo es ", areaT
+	Escribir "El área del círculo es ", areaT
+	Si(areaT > areaC) Entonces
+		Escribir "El área del triángulo es mayor que el área del círculo"
+	Sino
+		Escribir "El área del círculo es mayor o igual que el área del triángulo"
+	FinSi
+FinAlgoritmo
+
+
+/******************************************/
+9.- Escribe un Algoritmo que pida al usuario tres números enteros, y que muestre por pantalla Sila suma de dos de esos números da como resultado el otro número.
+
+Algoritmo Ejercicio9
+
+	Definir num1, num2, num3 Como Entero
+
+	Escribir "Escribe tres números: "
+	Leer num1, num2, num3
+
+	Si(num1 + num2 == num3) Entonces
+		Escribir "La suma del primero y el segundo da el tercero"
+    FinSi
+	Si(num1 + num3 == num2) Entonces
+		Escribir "La suma del primero y el tercero da el segundo"
+    FinSi
+	Si(num2 + num3 == num1) Entonces
+		Escribir "La suma del segundo y el tercero da el primero"
+    FinSi
+	Si((num1 + num2 != num3) AND (num1 + num3 != num2) AND (num2 + num3 != num1)) Entonces
+		Escribir "La suma de ninguno de los números da como resultado el otro"
+    FinSi
+FinAlgoritmo
+
+/******************************************/
+10.- Escribe un Algoritmo que simule el juego de piedra, papel, tijera (pidiendo a cada jugador que escriba PIEDRA, PAPEL o TIJERA). El juego debe mostrar por pantalla quien ha ganado el juego tras jugar una partida (puede que hayan empatado).
+
+Algoritmo PIEDRA_PAPEL_TIJERA
+/* Simula el juego de piedra, papel, tijera pidiendo a cada jugador que escriba que escoge y se muestra por pantalla quién gana.*/
+
+	Definir jugador1, jugador2 Como Cadena
+
+
+	Escribir "Jugador 1: (PIEDRA/PAPEL/TIJERA)?"
+	Leer jugador1
+
+	Escribir "Jugador 2: (PIEDRA/PAPEL/TIJERA)?"
+	Leer jugador2
+
+	Si(jugador1 == jugador2) Entonces
+		Escribir "Misma jugada: empate."
+	Sino
+		Si(jugador1 == "PIEDRA") && (jugador2 == "PAPEL") Entonces
+			Escribir "Ha ganado el jugador 2."
+		FinSi
+
+		Si(jugador1 == "PIEDRA") && (jugador2 == "TIJERA") Entonces
+			Escribir "Ha ganado el jugador 1."
+		FinSi
+
+		Si(jugador1 == "PAPEL") && (jugador2 == "PIEDRA") Entonces
+				Escribir "Ha ganado el jugador 1."
+		FinSi
+
+		Si(jugador1 == "PAPEL") && (jugador2 == "TIJERA") Entonces
+				Escribir "Ha ganado el jugador 2."
+		FinSi
+
+		Si(jugador1 == "TIJERA") && (jugador2 == "PIEDRA") Entonces
+				Escribir "Ha ganado el jugador 2."
+		FinSi
+
+		Si(jugador1 == "TIJERA") && (jugador2 == "PAPEL") Entonces
+				Escribir "Ha ganado el jugador 1."
+		FinSi
+
+    FinSi
+
+FinAlgoritmo

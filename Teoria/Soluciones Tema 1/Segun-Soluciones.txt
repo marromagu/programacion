@@ -1,0 +1,163 @@
+//////////////////////////////////////////////////////
+1- Escribe un algoritmo que pida al usuario un número real y muestre por pantalla la nota del alumno, teniendo en cuenta:
+
+0-5 es INSUFICIENTE (0 inclusive)
+
+5-6 es SUFICIENTE (5 inclusive)
+
+6-7 es BIEN (6 inclusive)
+
+7-9 es NOTABLE (7 inclusive)
+
+9-10 es SOBRESALIENTE (9 y 10 inclusive)
+////////////////////////////////////////////////////
+
+Algoritmo ej_Segun1
+    Definir nota Como Entero
+
+	Escribir "Introduzca un nota:"
+	Leer nota
+	Segun(nota)
+		5:
+			Escribir "Suficiente"
+		6:
+			Escribir "Bien"
+		7,8:
+			Escribir "Notable"
+		9,10:
+			Escribir "Sobresaliente"
+		De Otro Modo: 
+			Escribir "Insuficiente"
+	Fin Segun
+FinAlgoritmo
+ 
+
+////////////////////////////////////////////////////
+ 2.- Escribe un algoritmo que le pida al usuario dos números. Luego, muestre por pantalla un menú con las siguientes es:
+ 
+ a) Sumar (n1 + n2)
+
+ b) Restar (n1 - n2)
+
+ c) Multiplicar (n1 * n2)
+
+ d) Dividir (n1 / n2)
+
+Después, el algoritmo debe pedirle al usuario que seleccione una opción y que haga la operación que marca esa opción, mostrando por último el  resultado de la operación elegida por el usuario. Si el usuario elige una opción incorrecta, el algoritmo se lo hace saber al usuario y no haría nada. Debes usar la instrucción Segun.
+/////////////////////////////////////////////////////
+ 
+Algoritmo ej_Segun2
+	Definir num1, num2 Como Entero
+	Definir resultado Como Real
+	Definir op Como Caracter
+
+	Escribir"Introduzca el primer numero"
+	Leer num1
+	Escribir"Introduzca el Segundo numero"
+	Leer num2
+	Escribir "MENU"
+	Escribir "a) Sumar (n1 + n2)"
+	Escribir "b)  Restar (n1 - n2)"
+	Escribir "c) Multiplicar (n1 * n2)"
+	Escribir "d) Dividir (n1 / n2)"
+	Escribir "Introduzca la opción elegida (a|b|c|d):"
+	Leer op
+
+	Segun (op) Hacer
+		 'a':
+			resultado = num1 + num2
+			Escribir "El resultado de la suma es: ", resultado
+		 'b':
+			resultado = num1 - num2
+			Escribir "El resultado de la resta es: ", resultado
+		 'c':
+			resultado = num1 * num2
+			Escribir "El resultado de la multiplicacion es: ", resultado
+		 'd':
+			resultado = num1 / num2
+			Escribir "El resultado de la division es: ", resultado
+		De Otro Modo:
+			Escribir "Opción incorrecta"
+    Fin Segun
+
+FinAlgoritmo
+ 
+ 
+////////////////////////////////////////////////////*/
+ 3.- Escribe un algoritmo para sumar dos tiradas de un dado de seis caras que haría el usuario. El algoritmo pregunta al usuario cuanto ha sacado en la primera tirada y el usuario le dará esa información pero en formato cadena (o sea, UNO, DOS…,SEIS). Después el algoritmo volverá a preguntar al usuario cuanto ha sacado en la Segunda tirada y el usuario también dará esa información en formato cadena. Por último, el algoritmo mostrará por pantalla la suma de las dos tiradas en formato numérico. Debes usar la instrucción Segun.
+/////////////////////////////////////////////////////
+ 
+Algoritmo ej_Segun3a
+	// Versión secuencial 
+
+    Definir num1, num2 Como Entero
+	Definir dado Como Caracter
+	num1 = 0
+	num2 = 0
+	// Primera tirada
+   	Escribir "Introduzca la primera tirada"
+   	Leer dado
+	Segun (dado)
+		 "UNO":
+			num1 = 1
+		 "DOS":
+			num1 = 2
+		 "TRES":
+			num1 = 3
+		 "CUATRO":
+			num1 = 4
+		 "CINCO":
+			num1 = 5
+		 "SEIS":
+			num1 = 6
+	Fin Segun
+	// Segunda tirada
+   	Escribir"Introduzca la Segunda tirada"
+   	Leer dado
+	Segun (dado)
+		 "UNO":
+			num2 = 1
+		 "DOS":
+			num2 = 2
+		 "TRES":
+			num2 = 3
+		 "CUATRO":
+			num2 = 4
+		 "CINCO":
+			num2 = 5
+		 "SEIS":
+			num2 = 6
+	Fin Segun
+	Escribir "La suma de los dados es: ", num1 + num2
+
+FinAlgoritmo 
+///////////////////////////////////////////////
+Algoritmo ej_Segun3b
+	// Versión con bucle 
+
+    Definir suma, cont Como Entero
+	Definir dado Como Caracter
+	suma = 0
+	cont = 0
+	Para cont=1 Hasta 2 Con Paso 1 Hacer
+		Escribir "Introduzca la tirada ", cont
+		Leer dado
+		Segun (dado) Hacer
+			 "UNO":
+				suma = suma + 1
+			 "DOS":
+				suma = suma + 2
+			 "TRES":
+				suma = suma + 3
+			 "CUATRO":
+				suma = suma + 4
+			 "CINCO":
+				suma = suma + 5
+			 "SEIS":
+				suma = suma + 6
+		Fin Segun
+	Fin Para
+
+	Escribir "La suma de los dados es: ", suma
+
+FinAlgoritmo 

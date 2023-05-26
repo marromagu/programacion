@@ -1,0 +1,265 @@
+1.- Dado un número positivo por el usuario, mostrar todos los números que hay desde 0 hasta dicho número inclusive.
+
+Algoritmo bucles_1
+	Definir num, i Como Entero
+	i = 0
+	
+	Escribir "Escriba un número:"
+	Leer num
+	Escribir "Con el Mientras"
+	Mientras (i<=num) Hacer
+		Escribir i
+		i = i + 1
+	Fin Mientras
+	Escribir "Con el Para"
+	Para i = 0 Hasta num Con Paso 1 Hacer
+		Escribir i " " Sin Saltar
+	Fin Para
+	i = 0
+	Escribir "Con el Repetir"
+	Repetir
+		Escribir i
+		i = i + 1
+	Mientras Que i <= num
+FinAlgoritmo 
+
+2.- Dado dos números positivos (el primero más pequeño que el segundo), mostrar todos los números que hay desde el primero hasta el segundo (ambos inclusive).
+
+
+// Dado dos números positivos (el primero más pequeño que el segundo),
+//mostrar todos los números que hay desde el primero hasta el segundo
+//(ambos inclusive)
+
+Algoritmo bucles_2
+	// Suponiendo que el usuario hace caso a las instrucciones
+	Definir num1, num2, i Como Entero
+	
+	Escribir "Escriba un número:"
+	Leer num1
+	Escribir "Escriba otro mayor que el anterior:"
+	Leer num2
+	i = num1
+	Mientras (i<=num2) Hacer
+		Escribir i " " Sin Saltar
+		i = i + 1
+	Fin Mientras
+	Escribir ""
+	Para i = num1 Hasta num2 Con Paso 1 Hacer
+		Escribir i " " Sin Saltar
+	Fin Para
+	Escribir " "
+	i = num1
+	Repetir
+		Escribir i " " Sin Saltar
+		i = i + 1
+	Mientras Que i <= num2
+FinAlgoritmo 
+
+3.- Dados dos números positivos (el primero más pequeño que el segundo), mostrar la suma de todos los números desde el primero hasta el segundo (ambos inclusive).
+
+Algoritmo bucles_3
+	// Suponiendo que el usuario hace caso a las instrucciones
+	Definir num1, num2, i, suma Como Entero
+	suma = 0
+	Escribir "Escriba un número:"
+	Leer num1
+	Escribir "Escriba otro mayor que el anterior:"
+	Leer num2
+	i = num1
+	Mientras (i<=num2) Hacer
+		suma = suma + i
+		i = i + 1
+	Fin Mientras
+	Escribir "La suma vale " suma
+	Escribir ""
+	suma = 0 // Muy IMPORTANTE la inicialización de variables
+	Para i = num1 Hasta num2 Con Paso 1 Hacer
+		suma = suma + i
+	Fin Para
+	Escribir " "
+	Escribir "La suma vale " suma
+	i = num1
+	suma = 0
+	Repetir
+		suma = suma + i
+		i = i + 1
+	Mientras Que i <= num2
+	Escribir "La suma vale " suma
+FinAlgoritmo 
+
+4.- Dado dos números positivos (el primero más pequeño que el segundo), mostrar todos los números, desde el primero hasta el segundo, que sean divisores de un número concreto (dado también por el usuario).
+
+Algoritmo bucles_4
+	// Suponiendo que el usuario hace caso a las instrucciones
+
+	Definir num1, num2, num3, i Como Entero
+
+	Escribir "Escriba un número:"
+	Leer num1
+	Escribir "Escriba otro mayor que el anterior:"
+	Leer num2
+	Escribir "Escriba un número para mostrar sus divisores"
+	Leer num3
+	i = num1
+	Mientras (i<=num2) Hacer
+		Si (num3 % i == 0) Entonces
+			Escribir i
+		Fin Si
+		i = i + 1
+	Fin Mientras
+FinAlgoritmo
+
+
+
+5.- Dados dos números positivos (el primero más pequeño que el segundo), mostrar la suma de todos los números, desde el primero hasta el segundo, que sean divisores de un número concreto (dado también por el usuario).
+
+Algoritmo bucles_5
+	// Suponiendo que el usuario hace caso a las instrucciones
+	Definir num1, num2, num3, suma, i Como Entero
+	Escribir "Escriba un número:"
+	Leer num1
+	Escribir "Escriba otro mayor que el anterior:"
+	Leer num2
+	Escribir "Escriba otro número para mostrar sus divisores:"
+	Leer num3
+	suma = 0
+	i = num1
+	Mientras (i<=num2) Hacer
+		Si num3 MOD i == 0 Entonces
+			Escribir i " " Sin Saltar
+			suma = suma + i
+		Fin Si
+		i = i + 1
+	Fin Mientras
+	Escribir ""
+	Escribir "La suma es " suma
+	suma = 0
+	Para i = num1 Hasta num2 Con Paso 1 Hacer
+		Si num3 MOD i == 0 Entonces
+			Escribir i " " Sin Saltar
+			suma = suma + i
+		Fin Si
+	Fin Para
+	Escribir " "
+	Escribir "La suma es " suma
+	i = num1
+	suma = 0
+	Repetir
+		Si num3 MOD i == 0 Entonces
+			Escribir i " " Sin Saltar
+			suma = suma + i
+		Fin Si
+		i = i + 1
+	Mientras Que i <= num2
+	Escribir "La suma es " suma
+FinAlgoritmo 
+
+
+6.- Leer un número e indicar si es positivo o negativo. El proceso se repetirá hasta que se introduzca un 0.
+
+Algoritmo bucles_6
+	Definir num Como Entero
+
+	Escribir "Escriba un número, 0 para terminar:"
+	Leer num
+	Mientras (num <> 0) Hacer
+		Si (num >= 0) Entonces
+			Escribir "Positivo"
+		SiNo
+			Escribir "Negativo"
+		Fin Si
+        Leer num
+	Fin Mientras
+FinAlgoritmo 
+
+7.- Pedir números hasta que se teclee uno negativo. Una vez ocurra esto, el algoritmo debe imprimir la suma de todos los números introducidos a excepción del número negativo.
+
+Algoritmo bucles_7
+	Definir num, suma Como Entero
+	suma = 0
+
+	Escribir "Escriba un número, negativo para terminar:"
+	Leer num
+	Mientras NO (num < 0) Hacer
+		suma = suma + num
+        Leer num
+	Fin Mientras
+	Escribir suma
+FinAlgoritmo 
+
+
+8.- Realiza un juego para adivinar un número numSecreto (por ejemplo, entre 0 y 20). El algoritmo debe ir pidiendo números al usuario indicando si es mayor o menor que numSecreto. El algoritmo acaba cuando el usuario acierta el número (Utilizar la función Azar).
+
+Algoritmo bucles_8
+	Definir num, numSecreto Como Entero
+	suma = 0
+	
+	Escribir "Escriba un número entre 0 y 20, para averiguar el núemro secreto"
+	Leer num
+	numSecreto = Azar(21) //Suponemos que es una función que nos devuelve un número entre 0 y 20
+	Mientras (num <> numSecreto) Hacer
+		Si (num < numSecreto) Entonces
+			Escribir "El número secreto es mayor"
+		SiNo
+			Escribir "El número secreto es menor"
+		Fin Si
+        Leer num
+	Fin Mientras
+	Escribir "Has acertado"
+FinAlgoritmo 
+9.- Pedir 10 números y escribir la suma total.
+
+Algoritmo bucles_9
+	Definir num, i, suma Como Entero
+	suma = 0
+	i = 0
+	Escribir "Con MIENTRAS"
+	Escribir "Escriba 10 números"
+	Mientras (i<10) Hacer
+		Leer num
+		suma = suma + num
+		i = i + 1
+	Fin Mientras
+	Escribir suma
+	Escribir "Con PARA"
+	suma = 0
+	Escribir "Escriba 10 números"
+	Para i = 1 Hasta 10 Con Paso 1 Hacer
+		Leer num
+		suma = suma + num
+	Fin Para
+	Escribir suma	
+	
+FinAlgoritmo 
+
+10.- Pedir un número N, introducir N números y mostrar el mínimo, máximo y la media.
+
+Algoritmo bucles_9
+	Definir num, n, i, min, max, suma Como Entero
+	suma = 0
+	Definir med Como Real
+
+	Escribir "Escriba cuantos números va a introducir:"
+    Leer n
+	i = 0
+	Mientras (i<n) Hacer
+		Leer num
+		Si (i == 0) Entonces
+			min = num
+			max = num
+		Fin Si
+		Si (min > num) Entonces
+			min = num
+		Fin Si
+		Si (max < num) Entonces
+			max = num
+		Fin Si
+		suma = suma + num
+		i = i + 1
+	Fin Mientras
+    med = suma / n // Habría que convertir a REAL
+	Escribir "El mínimo es: ", min
+	Escribir "El máximo es: ", max
+	Escribir "La media es: ", med
+	
+FinAlgoritmo 

@@ -1,0 +1,133 @@
+// ------------------------------------------------------ 
+1.- Escribe un Algoritmo que pida al usuario un número entero e imprima por pantalla el doble de ese número y el triple de ese número.
+
+Algoritmo Ejer_secuencial_1
+	// Muestra el doble y el triple de un número pedido por teclado */
+    Definir num Como Entero
+	num = 0
+    Escribir "Introduzca un número:"
+    Leer num
+    Escribir "El doble es ", 2*num, " y el triple es ", 3*num
+FinAlgoritmo
+
+// ------------------------------------------------------ 
+2.- Escribe un Algoritmo que pida al usuario un número real e imprima por pantalla ese número multiplicado por si mismo.
+
+Algoritmo Ejer_secuencial_2
+	// Muestra el cuadrado de un número pedido por teclado */
+    Definir num Como Real
+	num = 0
+    Escribir "Introduzca un número:"
+    Leer num
+    Escribir "El cuadrado es ", num*num
+FinAlgoritmo
+
+// ------------------------------------------------------ 
+3.- Escribe un Algoritmo que pida al usuario un nombre y dos apellidos y los imprima por pantalla.
+
+Algoritmo Ejer_secuencial_3
+	// Pide al usuario un nombre y dos apellidos y los imprima por pantalla */
+    Definir nom, apel1, apel2 Como Cadena
+
+    Escribir "Introduzca su nombre:"
+    Leer nom
+    Escribir "Primer apellido:"
+    Leer apel1
+    Escribir "Segundo apellido:"
+    Leer apel2
+    Escribir "Su nombre es ",nom," ",apel1," ", apel2
+FinAlgoritmo
+
+// ------------------------------------------------------ 
+4.- Escribe un Algoritmo que pida al usuario el radio de un círculo e imprima por pantalla el área y el perímetro del circulo. Ten en cuenta que debes tener una constante para guardar el valor de PI (que debe ser 3.1416).
+
+Algoritmo Ejer_secuencial_4
+	// Pide el radio de una circunferencia y muestra el área del círculo y su perímetro
+    Definir radio, area, long Como Real
+
+    Escribir "Introduzca el radio:"
+    Leer radio
+    area = PI * radio * radio
+    long = 2 * PI * radio
+    Escribir "El área vale ",area," y el perímetro ", long
+FinAlgoritmo
+
+// ------------------------------------------------------ 
+5.- Escribe un Algoritmo que pida al usuario dos números enteros y muestre por pantalla el cociente de la división del primero por el segundo y también el resto que da de dividir los dos números.
+
+Algoritmo Ejer_secuencial_5
+	Definir num1, num2 Como Real
+	
+    Escribir "Introduzca dos números:"
+    Leer num1, num2
+    Escribir "El cociente de " num1 " entre " num2 " es " trunc(num1/num2)
+	Escribir "El resto es " num1 MOD num2
+FinAlgoritmo
+
+// ------------------------------------------------------ 
+6.- Escribe un Algoritmo que pida al usuario 5 caracteres e imprima en orden inverso los 5 caracteres dados por el usuario separados por comas.
+
+Algoritmo Ejer_secuencial_6
+    Definir c1, c2, c3, c4, c5 Como Caracter
+
+    Escribir "Introduzca 5 caracteres:"
+    Leer c1
+    Leer c2
+    Leer c3
+    Leer c4
+    Leer c5
+    Escribir c5,",",c4,",",c3,",",c2,",",c1 
+FinAlgoritmo    
+    
+// ------------------------------------------------------ 
+7.- Escribe un Algoritmo que muestre por pantalla el número 7, el número 7 elevado a 2 y el número 7 elevado a 3.
+Algoritmo Ejer_secuencial_7
+    Definir SIETE como Entero
+	SIETE = 7
+
+    Escribir SIETE
+    Escribir SIETE, " al cuadrado es ", SIETE^2 
+    Escribir SIETE, " al cubo es ", SIETE^3 
+FinAlgoritmo  
+// ------------------------------------------------------ 
+8.- Escribe un Algoritmo que pida al usuario un número y muestre por pantalla, el número dado por el usuario, el número dado por el usuario elevado a 2 y el número dado por el usuario elevado a 3.
+
+Algoritmo Ejer_secuencial_8
+
+    Definir num Como Entero
+    Escribir "Introduzca un número:"
+    Leer num
+    Escribir num
+    Escribir num, " al cuadrado es ", num^2 
+    Escribir num, " al cubo es ", num^3 
+FinAlgoritmo 
+
+// ------------------------------------------------------ 
+9.- Escribe un Algoritmo que pida al usuario un número, muestre dicho número. Incremente el valor del número en 1, muestre otra vez el número. Incremente el valor del número en 2 y muestre otra vez el número.
+
+Algoritmo Ejer_secuencial_9
+    Definir num Como Entero
+
+    Escribir "Introduzca un número:"
+    Leer num
+    Escribir num
+    num = num + 1
+    Escribir "Incrementar uno ", num 
+    num = num + 2
+    Escribir "Incrementar dos ", num 
+FinAlgoritmo 
+
+// ------------------------------------------------------ 
+
+10.- Escribe un Algoritmo que pida al usuario su nombre y su edad y muestre por pantalla un mensaje (si el usuario escribe "Juanito" y edad 21): "Hola Juanito, tienes 21 años, ¡que mayor eres!"
+
+Algoritmo Ejer_secuencial_10
+    Definir nomb Como Caracter
+    Definir edad Como Entero
+	
+    Escribir "Introduzca su nombre:"
+    Leer nomb
+    Escribir "Introduzca su edad:"
+    Leer edad
+    Escribir "Hola ", nomb,", tienes ", edad," años, ¡que mayor eres!"
+FinAlgoritmo 
